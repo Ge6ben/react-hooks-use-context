@@ -1,7 +1,10 @@
 import React from "react";
+import { User_Context, userContext } from "../context/user"
 
-function ThemedButton({ theme, ...props }) {
-  return <button className={theme} {...props} />;
+function ThemedButton() {
+  const theme=React.createContext(User_Context)
+
+  return <button className={theme} />;
 }
 
 export default ThemedButton;
